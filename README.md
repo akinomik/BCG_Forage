@@ -137,5 +137,6 @@ This analysis is part of the BCG Data Science & Advanced Analytics job simulatio
 
 The project showcases real-world data science skills applied to customer analytics and churn prediction challenges faced by consulting firms like BCG.
 It also demonstrates practical application of data science techniques in customer analytics and business consulting contexts.
+
 ---
 
