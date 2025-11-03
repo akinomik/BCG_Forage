@@ -148,11 +148,11 @@ It also demonstrates practical application of data science techniques in custome
 ## Edit after EDA & feature engineering tasks:
 
 The business case analysis accompanying a feature engineering part has accomplished:
-✅ Robust feature engineering - Created 31 new features based on EDA insights
-✅ Price sensitivity analysis - Built on the Dec-Jan price difference hypothesis (to gauge its feasibility)
-✅ Customer segmentation - Identified high-risk vs low-risk customers
-✅ Business case validation - Quantified the discount strategy opportunity
-✅ ROI calculation - Clear financial justification (0.6x ROI with 50% churn prevention)
+- ✅ Robust feature engineering - Created 31 new features based on EDA insights
+- ✅ Price sensitivity analysis - Built on the Dec-Jan price difference hypothesis (to gauge its feasibility)
+- ✅ Customer segmentation - Identified high-risk vs low-risk customers
+- ✅ Business case validation - Quantified the discount strategy opportunity
+- ✅ ROI calculation - Clear financial justification (0.6x ROI with 50% churn prevention)
 
 The analysis shows:
 - Clear targeting strategy (year-2 customers, single-product, price-sensitive)
@@ -161,3 +161,48 @@ The analysis shows:
 - Conservative assumptions that make the business case credible
 
 In short - this analysis shows how raw data can yield actionable business insights alongside clear financial implications.
+
+---
+
+## Edit after RF modelling and optimisation:
+
+RandomSearchCV method, although limited in scope versus GridSearchCV, yielded much better results, particularly re recall.
+
+The tuned Random Forest is now catching 36.6% of churners (vs 8.7% before) - that's a 4x improvement in recall!
+
+📊 **Current Performance Analysis:**
+
+✅ Major improvements:
+
+- Recall: 36.6% (was 8.7%) - Now catching over 1/3 of churners
+- F1 Score: 0.284 (was 0.158) - Better balance
+- Business impact: €26,520 revenue saved vs €8,620 false alarm costs = Net positive €17,900
+  
+⚠️ Trade-offs:
+
+- Accuracy dropped to 82% (was 91%) - Expected with class imbalance handling and random search CV which I know produces volatile results.
+- More false alarms: 431 customers (but still profitable)
+
+We could now run XGB to compare but as this is just exercise, it doesn't need more algos thrown at the problem at hand.
+
+
+The threshold optimization reveals some powerful insights:
+
+🎯 **Key Findings from Threshold Optimization:**
+
+Optimal Business Threshold: 0.40
+
+- Recall jumps to 65.1% (from 36.6%) - Now catching nearly 2/3 of churners
+- Net Benefit: €22,484 (vs €17,900 at default threshold)
+- Trade-off: Lower precision (15.8%) but much higher business value
+
+📊 Feature Importance Analysis - validates the EDA:
+
+The top features perfectly align with my earlier analysis:
+
+1. margin_gross_pow_ele & margin_net_pow_ele - Financial metrics (my margin analysis paid off)
+2. cons_12m & cons_last_month - Consumption patterns (from your EDA insights)
+3. forecast_meter_rent_12m - Contract/billing features
+4. months_activ & months_modif_prod - Lifecycle features (my year-2 customer insight)
+5. net_margin - Direct profitability measure
+6. off_peak_peak_var_mean_diff - The engineered price volatility feature
