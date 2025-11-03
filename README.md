@@ -10,10 +10,11 @@ The analysis focuses on understanding customer churn patterns in an energy utili
 
 ```
 BCG/
-├── Task 3 - eda_mik.ipynb    # Main EDA notebook
-├── client_data.csv           # Customer data
-├── price_data.csv           # Pricing data
-└── README.md               # This file
+├── Task 3 - eda_mik.ipynb                # Main EDA notebook
+├── Task 3 - feature_engineering.ipynb    # FE task notebook
+├── client_data.csv                       # Customer data
+├── price_data.csv                        # Pricing data
+└── README.md                             # This file
 ```
 
 ## Analysis Components
