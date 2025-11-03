@@ -11,8 +11,8 @@ The analysis focuses on understanding customer churn patterns in an energy utili
 ```
 BCG/
 ├── Task 3 - eda_mik.ipynb    # Main EDA notebook
-├── client_data.csv           # Customer data (not included in repo)
-├── price_data.csv           # Pricing data (not included in repo)
+├── client_data.csv           # Customer data
+├── price_data.csv           # Pricing data
 └── README.md               # This file
 ```
 
@@ -136,11 +136,6 @@ This analysis is part of the BCG Data Science & Advanced Analytics job simulatio
 - **Actionable insights generation**
 
 The project showcases real-world data science skills applied to customer analytics and churn prediction challenges faced by consulting firms like BCG.
-
-## Data Files NB
-
-**Note**: Data files (`client_data.csv`, `price_data.csv`) are not included in this repository due to confidentiality. The notebook assumes these files are present in the same directory.
-
+It also demonstrates practical application of data science techniques in customer analytics and business consulting contexts.
 ---
 
-*This project demonstrates practical application of data science techniques in customer analytics and business consulting contexts.*
