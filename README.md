@@ -8,11 +8,6 @@ The analysis focuses on understanding customer churn patterns in an energy utili
 
 ## Repository Structure
 
-clean_data_after_eda.csv
-Added datasets for tasks 3 & 4
-
-data_for_predictions.csv
-
 ```
 BCG/
 ├── Task 3 - eda_mik.ipynb                    # Main EDA notebook
