@@ -140,3 +140,19 @@ It also demonstrates practical application of data science techniques in custome
 
 ---
 
+## Edit after EDA & feature engineering tasks:
+
+The business case analysis accompanying a feature engineering part has accomplished:
+✅ Robust feature engineering - Created 31 new features based on EDA insights
+✅ Price sensitivity analysis - Built on the Dec-Jan price difference hypothesis (to gauge its feasibility)
+✅ Customer segmentation - Identified high-risk vs low-risk customers
+✅ Business case validation - Quantified the discount strategy opportunity
+✅ ROI calculation - Clear financial justification (0.6x ROI with 50% churn prevention)
+
+The analysis shows:
+- Clear targeting strategy (year-2 customers, single-product, price-sensitive)
+- Quantified risk (€249K already lost, €2.2M at risk)
+- Actionable recommendations (€220K discount budget, 12-18 month payback)
+- Conservative assumptions that make the business case credible
+
+In short - this analysis shows how raw data can yield actionable business insights alongside clear financial implications.
